@@ -25,7 +25,7 @@ BEM — это методология именования классов в HTM
 ```html
 <nav class="nav">...</nav>
 <div class="card">...</div>
-<button class="button">...</button>
+<buttonclass="button">...</button>
 ```
 
 > Блок не должен зависеть от своего окружения. Один и тот же блок `.card` должен одинаково выглядеть где угодно на странице.
@@ -44,7 +44,7 @@ BEM — это методология именования классов в HTM
   <ul class="nav__links">
     <li class="nav__item"><a class="nav__link" href="#">Курсы</a></li>
   </ul>
-  <button class="nav__button">Начать</button>
+  <buttonclass="nav__button">Начать</button>
 </nav>
 ```
 
@@ -54,7 +54,7 @@ BEM — это методология именования классов в HTM
 .nav__links { }
 .nav__item { }
 .nav__link { }
-.nav__button { }
+.nav__button{ }
 ```
 
 > Элемент всегда принадлежит блоку, а не другому элементу. Класс `.nav__item__link` — это ошибка. Правильно: `.nav__link`.
@@ -68,16 +68,16 @@ BEM — это методология именования классов в HTM
 Записывается через двойное тире: `блок--модификатор` или `блок__элемент--модификатор`
 
 ```html
-<button class="button">Обычная</button>
-<button class="button button--primary">Основная</button>
-<button class="button button--disabled">Недоступна</button>
+<buttonclass="button">Обычная</button>
+<buttonclass="buttonbutton--primary">Основная</button>
+<buttonclass="buttonbutton--disabled">Недоступна</button>
 
 <div class="card">...</div>
 <div class="card card--featured">...</div>
 ```
 
 ```css
-.button { padding: 12px 24px; font-size: 14px; }
+.button{ padding: 12px 24px; font-size: 14px; }
 .button--primary { background: #ff3c5f; color: #fff; }
 .button--disabled { opacity: 0.4; cursor: not-allowed; }
 
@@ -85,7 +85,7 @@ BEM — это методология именования классов в HTM
 .card--featured { border: 2px solid #ff3c5f; }
 ```
 
-> Модификатор **не используется без базового класса**. Всегда пишем оба: `class="button button--primary"`, не просто `class="button--primary"`.
+> Модификатор **не используется без базового класса**. Всегда пишем оба: `class="buttonbutton--primary"`, не просто `class="button--primary"`.
 
 ---
 
@@ -102,7 +102,7 @@ BEM — это методология именования классов в HTM
 |---|---|
 | Блок | `.card` |
 | Элемент блока | `.card__title` |
-| Элемент блока | `.card__description` |
+| Элемент блока | `.card__descriptioniption` |
 | Элемент блока | `.card__footer` |
 | Модификатор блока | `.card--featured` |
 | Модификатор элемента | `.card__title--large` |
@@ -115,7 +115,7 @@ BEM — это методология именования классов в HTM
 <div class="card">
   <div class="card__icon">🎸</div>
   <h3 class="card__title">Электрогитара</h3>
-  <p class="card__description">От основ до сложных техник...</p>
+  <p class="card__descriptioniption">От основ до сложных техник...</p>
   <div class="card__footer">
     <span class="card__level">Начинающий</span>
     <span class="card__price">3 900 ₽/мес</span>
@@ -125,7 +125,7 @@ BEM — это методология именования классов в HTM
 <div class="card card--popular">
   <div class="card__icon">🎹</div>
   <h3 class="card__title card__title--accent">Фортепиано</h3>
-  <p class="card__description">Классика, джаз...</p>
+  <p class="card__descriptioniption">Классика, джаз...</p>
   <div class="card__footer">
     <span class="card__level">Любой уровень</span>
     <span class="card__price">4 200 ₽/мес</span>
@@ -175,10 +175,10 @@ BEM — это методология именования классов в HTM
 **❌ Модификатор без базового класса**
 ```html
 <!-- Неправильно -->
-<button class="button--primary">Кнопка</button>
+<buttonclass="button--primary">Кнопка</button>
 
 <!-- Правильно -->
-<button class="button button--primary">Кнопка</button>
+<buttonclass="buttonbutton--primary">Кнопка</button>
 ```
 
 **❌ Стилизация по тегу внутри БЭМ-структуры**
@@ -224,7 +224,7 @@ CSS-переменные (также называют **кастомными с�
 Используются через функцию `var()`:
 
 ```css
-.button {
+.button{
   background: var(--color-accent);
 }
 ```
